@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avendra Partners</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="logo">Avendra Partners</div>
+    <a 
+      href="https://calendly.com/patrik-avendrapartners/new-meeting" 
+      class="nav-cta"
+      target="_blank"
+      rel="noopener"
+    >
+      Book a 15-minute intro call
+    </a>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">Performance-based lead generation</p>
+
+    <h1>
+      Predictable sales meetings.<br />
+      <span>Zero upfront risk.</span>
+    </h1>
+
+    <p class="subtext">
+      Avendra Partners helps early-stage B2B SaaS and tech founders book qualified
+      sales meetings with decision-makers — with no retainers, no setup fees,
+      and zero upfront risk.
+    </p>
+
+    <a 
+      href="https://calendly.com/patrik-avendrapartners/new-meeting" 
+      class="primary-cta"
+      target="_blank"
+      rel="noopener"
+    >
+      Book a 15-minute intro call
+    </a>
+  </section>
+
+  <section class="section">
+    <h2>This is not for everyone</h2>
+    <p>
+      We don’t work with volume-driven teams, very early-stage ideas, or companies
+      chasing cheap leads.
+    </p>
+    <p>
+      We only partner with founders where performance-based outbound makes
+      strategic sense.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Why founders trust Avendra</h2>
+
+    <div class="grid">
+      <div>
+        <h3>Aligned incentives</h3>
+        <p>
+          You only pay when meetings actually happen and prospects show up.
+          No retainers. No long-term contracts.
+        </p>
+      </div>
+
+      <div>
+        <h3>Founder-led execution</h3>
+        <p>
+          No handoffs, no junior SDRs. Campaigns are built and run directly.
+        </p>
+      </div>
+
+      <div>
+        <h3>Selective partnerships</h3>
+        <p>
+          We keep our client list intentionally small to maintain focus and quality.
+        </p>
+      </div>
+
+      <div>
+        <h3>Active across Europe</h3>
+        <p>
+          Ongoing campaigns with founders in Spain, the Netherlands and the UK.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>How it works</h2>
+    <ol>
+      <li>Define your ICP and positioning</li>
+      <li>Targeted outbound campaigns are launched</li>
+      <li>Qualified prospects book directly into your calendar</li>
+    </ol>
+
+    <p class="highlight">
+      You only pay when meetings actually happen and prospects show up.
+    </p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>
+      Reach out directly — or book a 15-minute intro call.
+    </p>
+
+    <div class="contact-details">
+      <a href="mailto:Patrik@avendrapartners.com">
+        Patrik@avendrapartners.com
+      </a>
+      <span>+47 949 78 121</span>
+    </div>
+
+    <a 
+      href="https://calendly.com/patrik-avendrapartners/new-meeting" 
+      class="primary-cta"
+      target="_blank"
+      rel="noopener"
+    >
+      Book a 15-minute intro call
+    </a>
+  </section>
+
+  <footer>
+    © Avendra Partners
+  </footer>
+
+</body>
+</html>
