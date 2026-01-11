@@ -13,27 +13,21 @@ body {
 
 /* NAV */
 .nav {
-  border-bottom: 1px solid #1a1f36;
-}
-
-.nav-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 24px 10%;
 }
 
 .logo {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .nav-cta {
   background: #4f7cff;
   color: #0b0d12;
-  padding: 10px 14px;
+  padding: 10px 16px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
@@ -41,19 +35,17 @@ body {
 
 /* HERO */
 .hero {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 90px 20px 70px;
+  padding: 100px 10%;
 }
 
 .eyebrow {
-  color: #9aa4ff;
+  color: #4f7cff;
   font-weight: 600;
   margin-bottom: 12px;
 }
 
 .hero h1 {
-  font-size: 44px;
+  font-size: 48px;
   margin-bottom: 20px;
 }
 
@@ -61,48 +53,45 @@ body {
   color: #4f7cff;
 }
 
-.hero-text {
-  max-width: 620px;
-  font-size: 18px;
+.subtext {
+  max-width: 600px;
   color: #cfd3ff;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
-/* CTA BUTTON */
+/* BUTTONS */
 .primary-cta {
   display: inline-block;
   background: #4f7cff;
   color: #0b0d12;
-  padding: 14px 22px;
-  border-radius: 8px;
+  padding: 14px 26px;
+  border-radius: 10px;
   font-weight: 700;
   text-decoration: none;
 }
 
 .primary-cta.big {
-  margin-top: 24px;
+  margin-top: 30px;
 }
 
 /* SECTIONS */
 .section {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 80px 20px;
+  padding: 90px 10%;
 }
 
-.section.alt {
-  background: #0f1325;
+.section.dark {
+  background: #111528;
 }
 
 .section h2 {
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 20px;
 }
 
 .section p {
   max-width: 700px;
-  color: #d6dbff;
-  margin-bottom: 14px;
+  color: #cfd3ff;
+  margin-bottom: 12px;
 }
 
 /* GRID */
@@ -110,44 +99,32 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
-.card {
-  background: #111528;
-  padding: 24px;
-  border-radius: 10px;
-}
-
-.card h3 {
-  margin-bottom: 10px;
+.grid h3 {
+  margin-bottom: 8px;
 }
 
 /* STEPS */
 .steps {
-  margin-left: 20px;
-  margin-bottom: 24px;
+  margin-top: 20px;
+  padding-left: 20px;
 }
 
-.highlight {
-  font-weight: 600;
-  color: #ffffff;
+.steps li {
+  margin-bottom: 10px;
 }
 
 /* TESTIMONIALS */
-.testimonials {
-  display: grid;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.testimonial {
+.testimonials blockquote {
   background: #111528;
-  padding: 22px;
+  padding: 24px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-.testimonial span {
+.testimonials span {
   display: block;
   margin-top: 10px;
   font-size: 14px;
@@ -155,16 +132,15 @@ body {
 }
 
 /* FAQ */
-.faq h4 {
-  margin-top: 18px;
-  margin-bottom: 6px;
+.faq p {
+  margin-bottom: 16px;
 }
 
-/* CTA SECTION */
+/* CTA */
 .cta {
+  padding: 120px 10%;
   text-align: center;
-  padding: 90px 20px;
-  background: linear-gradient(180deg, #0f1325, #0b0d12);
+  background: #0f1325;
 }
 
 .cta p {
@@ -173,12 +149,8 @@ body {
 }
 
 .email {
-  margin-top: 22px;
-}
-
-.email a {
-  color: #9aa4ff;
-  text-decoration: none;
+  margin-top: 20px;
+  color: #4f7cff;
 }
 
 /* FOOTER */
@@ -187,15 +159,4 @@ footer {
   padding: 30px;
   font-size: 14px;
   opacity: 0.6;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .section h2 {
-    font-size: 26px;
-  }
 }
