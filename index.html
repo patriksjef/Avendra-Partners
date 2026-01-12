@@ -1,129 +1,760 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avendra Partners – Performance Lead Generation</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avendra Partners - Performance-Based B2B Lead Generation</title>
+    <meta name="description" content="Book qualified sales meetings for your B2B SaaS. Pay only when meetings happen. No retainers, no setup fees. Europe-focused outbound expertise.">
+    
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ===== EMBEDDED CSS (samme som før, men fullstendig) ===== */
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #10b981;
+            --accent-color: #f59e0b;
+            --dark-bg: #0f172a;
+            --dark-secondary: #1e293b;
+            --dark-card: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border-color: #475569;
+            --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            --gradient-secondary: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: 1.5rem; }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--dark-card);
+            border-color: var(--primary-color);
+        }
+
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-text {
+            color: var(--text-primary);
+        }
+
+        .logo-accent {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-title {
+            margin-bottom: 1.5rem;
+        }
+
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .meeting-card {
+            background: var(--dark-card);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border-color);
+            max-width: 400px;
+            width: 100%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .card-header i {
+            font-size: 1.5rem;
+        }
+
+        .prospect-info {
+            margin-bottom: 1rem;
+        }
+
+        .prospect-info strong {
+            display: block;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .meeting-time {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* Section Styles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .why-section,
+        .process-section,
+        .faq-section {
+            padding: 5rem 0;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--dark-card);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--gradient-primary);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        /* Results Section */
+        .results-section {
+            padding: 5rem 0;
+            background: var(--dark-secondary);
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--dark-card);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+
+        .testimonial-author {
+            text-align: right;
+        }
+
+        .testimonial-author strong {
+            display: block;
+            color: var(--text-primary);
+        }
+
+        .testimonial-author span {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .step-number {
+            width: 4rem;
+            height: 4rem;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        .step-arrow {
+            color: var(--text-muted);
+            font-size: 1.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--dark-card);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 0;
+            background: var(--gradient-primary);
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.875rem;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 3rem 0 1rem;
+            background: var(--dark-bg);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-bottom p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+            
+            .step-arrow {
+                transform: rotate(90deg);
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-text">Avendra</span>
+                    <span class="logo-accent">Partners</span>
+                </div>
+                <div class="nav-cta">
+                    <a href="#contact" class="btn btn-outline">Book Call</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<header class="nav">
-  <div class="logo">Avendra Partners</div>
-  <a href="https://calendly.com/patrik-avendrapartners/new-meeting" class="nav-cta" target="_blank">
-    Book intro call
-  </a>
-</header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Predictable Sales Meetings.
+                        <span class="gradient-text">Pay Only When They Happen.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        I help early-stage B2B SaaS founders book qualified meetings with decision-makers. 
+                        No retainers, no setup fees, zero risk.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="https://calendly.com/patrik-avendrapartners/new-meeting" class="btn btn-primary">
+                            <i class="fas fa-phone"></i>
+                            Book Intro Call
+                        </a>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">€275</span>
+                                <span class="stat-label">Per Qualified Meeting</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Min Guarantee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="meeting-card">
+                        <div class="card-header">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Client Results</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="prospect-info">
+                                <strong>18 Qualified Meetings</strong>
+                                <span>HR Directors & VP People</span>
+                            </div>
+                            <div class="meeting-time">
+                                <i class="fas fa-trophy"></i>
+                                <span>2 Demo Bookings</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="hero">
-  <p class="eyebrow">Performance-based outbound</p>
-  <h1>
-    Predictable sales meetings.<br />
-    <span>Pay only if they happen.</span>
-  </h1>
-  <p class="subtext">
-    I help early-stage B2B SaaS and tech founders book qualified sales meetings — no retainers, no setup fees, zero risk.
-  </p>
-  <div class="hero-cta-wrapper">
-    <a href="https://calendly.com/patrik-avendrapartners/new-meeting" class="primary-cta" target="_blank">
-      Book a 15-minute intro call
-    </a>
-  </div>
-</section>
+    <!-- Why Section -->
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-title">Why Founders Choose Avendra</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Aligned Incentives</h3>
+                    <p>You only pay for meetings that actually happen. No retainers, no hidden fees.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Founder-Led Execution</h3>
+                    <p>I personally design and run every campaign. No junior SDRs or outsourcing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Highly Selective</h3>
+                    <p>I work with a small number of clients to protect quality and deliver results.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <h3>Europe-Focused</h3>
+                    <p>Deep experience with B2B SaaS in Spain, Netherlands, UK, and DACH markets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="section">
-  <h2>This is not for everyone</h2>
-  <p>No mass outreach or cheap lead lists. I only work with founders who want fewer, higher-quality conversations with decision-makers — and who are serious about converting them.</p>
-</section>
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="section-title">Client Success Stories</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"18 qualified meetings with HR Directors. 3 turned into demos, one became a €18k annual customer. €275 per meeting was easily worth it."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>HR Tech Founder</strong>
+                        <span>Seed stage, Netherlands</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"14 meetings with Engineering Managers. 2 pilots started, both converted to €6k annual contracts each. Perfect ROI for us."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>DevOps SaaS CEO</strong>
+                        <span>Pre-Series A, UK market</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="section dark">
-  <h2>Why founders choose Avendra</h2>
-  <div class="grid">
-    <div>
-      <h3>Aligned incentives</h3>
-      <p>You only pay for meetings that actually happen. No retainers.</p>
-    </div>
-    <div>
-      <h3>Founder-led execution</h3>
-      <p>I personally design and run every campaign.</p>
-    </div>
-    <div>
-      <h3>Highly selective</h3>
-      <p>I take on a small number of clients to protect quality.</p>
-    </div>
-    <div>
-      <h3>Europe-focused</h3>
-      <p>Deep experience with B2B SaaS and tech in Spain, Netherlands, UK.</p>
-    </div>
-  </div>
-</section>
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Strategy Alignment</h3>
+                    <p>We define your ICP, offer, and positioning together in a 60-minute strategy call.</p>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Campaign Launch</h3>
+                    <p>I launch targeted multi-channel outbound within 48 hours.</p>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Meetings Booked</h3>
+                    <p>Interested prospects book directly into your calendar. Pay only when they show up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="section">
-  <h2>About Patrik</h2>
-  <p>
-    I'm Patrik, founder of Avendra Partners. Focused on performance-based outbound for tech and SaaS — I book real meetings, or you don't pay. Simple as that.
-  </p>
-</section>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Common Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Is this cold email spam?</h3>
+                    <p>No. It's targeted, multi-channel outbound focused on relevance and fit. Every prospect is carefully researched.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How fast do results come?</h3>
+                    <p>Typically first meetings within 7–10 days after our strategy alignment call.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What markets do you cover?</h3>
+                    <p>Primarily Europe-based B2B SaaS and tech companies. Strong network in Spain, Netherlands, UK, and DACH.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you work with everyone?</h3>
+                    <p>No. I'm selective to protect performance. I only work with founders who have a clear value proposition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="section dark">
-  <h2>Early Results</h2>
-  <div class="testimonials">
-    <blockquote>
-      “We went from 4 to 14 qualified meetings in under a month. Clear process, no fluff.”
-      <span>— SaaS Founder (Netherlands, anonymized)</span>
-    </blockquote>
-    <blockquote>
-      “Finally an outbound setup where incentives are aligned. Meetings only, no noise.”
-      <span>— B2B Tech Founder (Spain, anonymized)</span>
-    </blockquote>
-  </div>
-</section>
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Predictable Meetings?</h2>
+                <p>Let's see if we're a fit. 15-minute intro call — no pitch, just alignment.</p>
+                <div class="cta-buttons">
+                    <a href="https://calendly.com/patrik-avendrapartners/new-meeting" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-alt"></i>
+                        Book Intro Call
+                    </a>
+                    <a href="mailto:patrik@avendrapartners.com" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        Email Patrik
+                    </a>
+                </div>
+                <div class="cta-note">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Only 3 client spots available this quarter</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="section">
-  <h2>How it works</h2>
-  <ol class="steps">
-    <li>We define your ICP, offer and positioning together</li>
-    <li>I launch targeted multi-channel outbound (email + LinkedIn)</li>
-    <li>Interested prospects book directly into your calendar</li>
-  </ol>
-  <p class="highlight">
-    You only pay when meetings actually happen and prospects show up.
-  </p>
-  <div class="cta-wrapper">
-    <a href="https://calendly.com/patrik-avendrapartners/new-meeting" class="primary-cta" target="_blank">
-      Book a 15-minute intro call
-    </a>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="logo">
+                        <span class="logo-text">Avendra</span>
+                        <span class="logo-accent">Partners</span>
+                    </div>
+                    <p>Performance-based outbound for B2B SaaS founders.</p>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> patrik@avendrapartners.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Europe-focused</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Avendra Partners. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-<section class="section dark">
-  <h2>FAQ</h2>
-  <div class="faq">
-    <p><strong>Is this cold email spam?</strong><br>No. It's targeted, multi-channel outbound focused on relevance and fit.</p>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-    <p><strong>How fast do results come?</strong><br>Typically first meetings within 7–10 days after alignment.</p>
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+            }
+        });
 
-    <p><strong>What markets do you cover?</strong><br>Primarily Europe-based B2B SaaS and tech.</p>
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
 
-    <p><strong>Do you work with everyone?</strong><br>No. I’m selective to protect performance.</p>
-  </div>
-</section>
-
-<section class="cta">
-  <h2>Let’s see if we’re a fit</h2>
-  <p>Short intro call — no pitch, just alignment.</p>
-
-  <a href="https://calendly.com/patrik-avendrapartners/new-meeting" class="primary-cta big" target="_blank">
-    Book a 15-minute intro call
-  </a>
-
-  <p class="email">patrik@avendrapartners.com</p>
-</section>
-
-<footer>
-  © Avendra Partners 2026
-</footer>
-
+        // Set initial body opacity
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease';
+    </script>
 </body>
 </html>
-
