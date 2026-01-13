@@ -72,17 +72,11 @@
             font-weight: 600;
             line-height: 1.2;
             margin-bottom: 1rem;
-            text-align: center;
         }
-
-        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-        h2 { font-size: clamp(2rem, 4vw, 3rem); }
-        h3 { font-size: 1.5rem; }
 
         p {
             color: var(--text-secondary);
             margin-bottom: 1rem;
-            text-align: center;
         }
 
         .btn {
@@ -183,11 +177,11 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
-            text-align: center;
         }
 
         .hero-title {
             margin-bottom: 1.5rem;
+            font-size: clamp(2.5rem, 5vw, 4rem);
         }
 
         .gradient-text {
@@ -207,20 +201,18 @@
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            align-items: center;
         }
 
         .hero-stats {
             display: flex;
             gap: 3rem;
-            justify-content: center;
-            margin-top: 1rem;
+            justify-content: flex-start;
         }
 
         .stat {
             display: flex;
             flex-direction: column;
-            text-align: center;
+            text-align: left;
             min-width: 120px;
         }
 
@@ -249,7 +241,6 @@
             box-shadow: var(--shadow-xl);
             border: 1px solid var(--border-color);
             max-width: 400px;
-            text-align: left;
         }
 
         .card-header {
@@ -281,7 +272,6 @@
         /* Why Section */
         .why-section {
             padding: 80px 0;
-            text-align: center;
         }
 
         .section-title {
@@ -293,7 +283,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            text-align: center;
         }
 
         .feature-card {
@@ -326,14 +315,12 @@
         .results-section {
             padding: 80px 0;
             background: var(--dark-secondary);
-            text-align: center;
         }
 
         .testimonials {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            text-align: center;
         }
 
         .testimonial-card {
@@ -341,7 +328,6 @@
             border-radius: 1rem;
             padding: 2rem;
             border: 1px solid var(--border-color);
-            text-align: center;
         }
 
         .testimonial-content {
@@ -352,7 +338,6 @@
         .testimonial-author {
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
 
         .testimonial-author strong {
@@ -367,7 +352,6 @@
         /* Process Section */
         .process-section {
             padding: 80px 0;
-            text-align: center;
         }
 
         .process-steps {
@@ -401,23 +385,23 @@
             font-size: 2rem;
             color: var(--primary-color);
             margin-top: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         /* FAQ Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
         .faq-section {
             padding: 80px 0;
             background: var(--dark-secondary);
-            text-align: center;
         }
 
         .faq-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            text-align: center;
         }
 
         .faq-item {
@@ -425,7 +409,6 @@
             border-radius: 1rem;
             padding: 2rem;
             border: 1px solid var(--border-color);
-            text-align: center;
         }
 
         .faq-item h3 {
@@ -436,7 +419,6 @@
         /* CTA Section */
         .cta-section {
             padding: 80px 0;
-            text-align: center;
         }
 
         .cta-content {
@@ -461,39 +443,27 @@
             font-size: 0.875rem;
         }
 
-        /* Footer - Centered */
+        /* Footer */
         .footer {
             padding: 60px 0 30px;
             background: var(--dark-secondary);
             border-top: 1px solid var(--border-color);
-            text-align: center;
         }
 
         .footer-content {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
+            justify-content: space-between;
+            align-items: flex-start;
             margin-bottom: 2rem;
-            text-align: center;
         }
 
         .footer-info {
             display: flex;
             flex-direction: column;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            justify-content: center;
-            margin-bottom: 1rem;
         }
 
         .footer-contact {
-            text-align: center;
+            text-align: right;
         }
 
         .footer-bottom {
@@ -508,6 +478,10 @@
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
             }
             
             .process-steps {
@@ -525,9 +499,14 @@
                 align-items: center;
             }
             
-            .hero-stats {
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
                 gap: 2rem;
-                flex-direction: row;
+            }
+            
+            .footer-contact {
+                text-align: center;
             }
         }
     </style>
@@ -584,12 +563,12 @@
                         </div>
                         <div class="card-content">
                             <div class="prospect-info">
-                                <strong>18 Qualified Meetings</strong>
-                                <span>HR Directors & VP People</span>
+                                <strong>Qualified Meetings</strong>
+                                <span>Decision-makers & HR Directors</span>
                             </div>
                             <div class="meeting-time">
                                 <i class="fas fa-trophy"></i>
-                                <span>2 Demo Bookings</span>
+                                <span>Pay Only When They Show</span>
                             </div>
                         </div>
                     </div>
@@ -608,7 +587,7 @@
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3>Aligned Incentives</h3>
-                    <p>No retainers, no monthly minimums - you pay when prospects show up.</p>
+                    <p>You only pay for meetings that actually happen. No retainers, no setup fees, zero risk.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -622,14 +601,14 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <h3>Highly Selective</h3>
-                    <p>I work with a small number of clients to protect quality and deliver results.</p>
+                    <p>I keep my client list small to protect quality and deliver results for every campaign.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-globe-europe"></i>
                     </div>
                     <h3>Europe Focused</h3>
-                    <p>Deep experience with B2B SaaS in Spain and Netherlands markets.</p>
+                    <p>Deep experience with B2B SaaS and tech in Spain, Netherlands and UK markets.</p>
                 </div>
             </div>
         </div>
@@ -642,11 +621,11 @@
             <div class="testimonials">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"A Netherlands SaaS founder said: We got 28 meetings in 6 weeks - one converted to €18k annual. The ROI was immediate!"</p>
+                        <p>"We went from 4 to 14 qualified meetings in under a month. Clear process, no fluff. The pay-only-for-results model just makes sense."</p>
                     </div>
                     <div class="testimonial-author">
-                        <strong>HR Tech Founder</strong>
-                        <span>Netherlands, Series A</span>
+                        <strong>SaaS Founder</strong>
+                        <span>Netherlands</span>
                     </div>
                 </div>
                 <div class="testimonial-card">
@@ -655,14 +634,14 @@
                     </div>
                     <div class="testimonial-author">
                         <strong>B2B Tech Founder</strong>
-                        <span>Spain, Seed Stage</span>
+                        <span>Spain</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section - Updated with 15 min strategy call -->
+    <!-- Process Section -->
     <section class="process-section">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
@@ -670,7 +649,7 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3>15-Min Alignment</h3>
-                    <p>Quick chat to see if we're a fit. No sales pitch - just straight talk about your goals.</p>
+                    <p>Quick chat to see if we're a fit. No sales pitch - just honest conversation about your goals.</p>
                 </div>
                 <div class="step-arrow">
                     <i class="fas fa-arrow-right"></i>
@@ -678,7 +657,7 @@
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Strategy Session</h3>
-                    <p>If aligned, we deep-dive into your ICP and value prop in a 15-minute focused strategy call.</p>
+                    <p>If aligned, we deep-dive into your ICP and value prop together.</p>
                 </div>
                 <div class="step-arrow">
                     <i class="fas fa-arrow-right"></i>
@@ -692,26 +671,26 @@
         </div>
     </section>
 
-    <!-- FAQ Section - Fixed (no duplicates) -->
+    <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
             <h2 class="section-title">Common Questions</h2>
             <div class="faq-grid">
                 <div class="faq-item">
                     <h3>What happens after the 15-min call?</h3>
-                    <p>If we're a fit, we schedule a deeper 15-minute strategy session. If not, I'll point you to better resources.</p>
+                    <p>If we're a fit, we schedule a deeper strategy session. If not, I'll point you to better resources.</p>
                 </div>
                 <div class="faq-item">
                     <h3>How fast do results come?</h3>
-                    <p>First meetings typically within 7-10 days after our 15-minute strategy session. Some clients see results in 3-5 days.</p>
+                    <p>Typically first meetings within 7–10 days after alignment. Some clients see results in 3-5 days.</p>
                 </div>
                 <div class="faq-item">
                     <h3>What markets do you cover?</h3>
-                    <p>Primarily Europe-based B2B SaaS and tech companies. Strong network in Spain and Netherlands.</p>
+                    <p>Primarily Europe-based B2B SaaS and tech companies. Strong network in Spain, Netherlands and UK.</p>
                 </div>
                 <div class="faq-item">
                     <h3>Do you work with everyone?</h3>
-                    <p>No. I'm selective to protect performance. I only work with founders who have a clear value proposition and defined ICP.</p>
+                    <p>No. I'm selective to protect performance. I only work with founders who have a clear value proposition.</p>
                 </div>
                 <div class="faq-item">
                     <h3>How do you track meetings?</h3>
@@ -725,7 +704,7 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- CTA Section med LinkedIn -->
     <section id="contact" class="cta-section">
         <div class="container">
             <div class="cta-content">
@@ -741,6 +720,15 @@
                         Email Patrik
                     </a>
                 </div>
+                <!-- KUN 1 LinkedIn lenke her -->
+                <div style="margin-top: 1.5rem;">
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">
+                        <i class="fab fa-linkedin"></i> 
+                        <a href="http://linkedin.com/in/patrik-bachmann-a0362738b" target="_blank" style="color: var(--primary-color);">
+                            Connect on LinkedIn
+                        </a>
+                    </p>
+                </div>
                 <div class="cta-note">
                     <i class="fas fa-info-circle"></i>
                     <span>Results-based - pay only for real meetings</span>
@@ -749,7 +737,7 @@
         </div>
     </section>
 
-    <!-- Footer - Centered -->
+    <!-- Footer med LinkedIn -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -758,15 +746,25 @@
                         <span class="logo-text">Avendra</span>
                         <span class="logo-accent">Partners</span>
                     </div>
-                    <p>Performance-based outbound for B2B SaaS founders.</p>
+                    <p>Performance-based outbound for B2B SaaS founders. Europe-focused expertise.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="http://linkedin.com/in/patrik-bachmann-a0362738b" target="_blank" style="color: var(--primary-color);">
+                            <i class="fab fa-linkedin"></i> View LinkedIn Profile
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-contact">
                     <p><i class="fas fa-envelope"></i> patrik@avendrapartners.com</p>
                     <p><i class="fas fa-map-marker-alt"></i> Europe focused</p>
+                    <p><i class="fas fa-phone"></i> Available for calls</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Avendra Partners. All rights reserved.</p>
+                <p>&copy; 2026 Avendra Partners. All rights reserved. | 
+                    <a href="http://linkedin.com/in/patrik-bachmann-a0362738b" target="_blank" style="color: var(--primary-color);">
+                        Connect on LinkedIn
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
@@ -803,7 +801,6 @@
     </script>
 </body>
 </html>
-
 
 
 
