@@ -269,9 +269,140 @@
             color: var(--secondary-color);
         }
 
+        /* Test Month Offer Section - FINAL VERSION */
+        .test-offer-section {
+            padding: 100px 0;
+            background: var(--dark-secondary);
+            text-align: center;
+            position: relative;
+        }
+
+        .offer-box {
+            background: var(--dark-card);
+            border-radius: 1rem;
+            padding: 4rem 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 2px solid var(--primary-color);
+            position: relative;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .offer-title {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .offer-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .price-clarification {
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .price-clarification p {
+            color: var(--text-primary);
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .price-highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .offer-features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .offer-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .offer-benefits {
+            text-align: left;
+            max-width: 600px;
+            margin: 2.5rem auto;
+        }
+
+        .offer-benefits h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .offer-benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .offer-benefits li {
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .offer-benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .offer-cta {
+            margin-top: 2.5rem;
+        }
+
+        .offer-cta .btn {
+            margin: 0 0.5rem;
+        }
+
+        .offer-ps {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-top: 2rem;
+            font-style: italic;
+        }
+
         /* Why Section */
         .why-section {
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
         .section-title {
@@ -313,7 +444,7 @@
 
         /* Results Section */
         .results-section {
-            padding: 80px 0;
+            padding: 100px 0;
             background: var(--dark-secondary);
         }
 
@@ -351,7 +482,7 @@
 
         /* Process Section */
         .process-section {
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
         .process-steps {
@@ -389,7 +520,7 @@
 
         /* FAQ Section */
         .faq-section {
-            padding: 80px 0;
+            padding: 100px 0;
             background: var(--dark-secondary);
         }
 
@@ -411,9 +542,9 @@
             margin-bottom: 1rem;
         }
 
-        /* CTA Section */
+        /* CTA Section - ENKEL OG RENSKREVET */
         .cta-section {
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
         .cta-content {
@@ -423,19 +554,11 @@
         }
 
         .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin: 2rem 0;
+            margin: 2.5rem 0;
         }
 
         .cta-note {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            justify-content: center;
-            color: var(--text-muted);
-            font-size: 0.875rem;
+            margin-top: 1.5rem;
         }
 
         /* Footer */
@@ -479,6 +602,11 @@
                 justify-content: center;
             }
             
+            .offer-features {
+                flex-direction: column;
+                align-items: center;
+            }
+            
             .process-steps {
                 flex-direction: column;
                 align-items: center;
@@ -487,11 +615,6 @@
             .step-arrow {
                 transform: rotate(90deg);
                 margin: 1rem 0;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
             }
             
             .footer-content {
@@ -568,6 +691,54 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Month Offer Section - FINAL VERSION -->
+    <section class="test-offer-section">
+        <div class="container">
+            <div class="offer-box">
+                <div class="offer-badge">ONLY 3 SPOTS LEFT</div>
+                <h2 class="offer-title">Prove It Works - Low-Risk Test Month</h2>
+                <p class="offer-subtitle">
+                    Want to see this work for YOUR business before committing? 
+                    Start with a test month and get real meetings with zero risk.
+                </p>
+                
+                <div class="offer-features">
+                    <div class="offer-feature">
+                        <i class="fas fa-check-circle" style="color: var(--secondary-color);"></i>
+                        <span>5-10 qualified meetings</span>
+                    </div>
+                    <div class="offer-feature">
+                        <i class="fas fa-check-circle" style="color: var(--secondary-color);"></i>
+                        <span>Same €275 per meeting</span>
+                    </div>
+                    <div class="offer-feature">
+                        <i class="fas fa-check-circle" style="color: var(--secondary-color);"></i>
+                        <span>No long-term commitment</span>
+                    </div>
+                </div>
+
+                <div class="price-clarification">
+                    <p>
+                        <span class="price-highlight">€275 per meeting</span> - exactly the same as regular pricing. 
+                        This isn't a discount - it's a way to prove the model works for your specific business.
+                    </p>
+                </div>
+
+                <div class="offer-cta">
+                    <a href="https://calendly.com/patrik-avendrapartners/new-meeting" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i>
+                        Claim Test Month
+                    </a>
+                </div>
+
+                <p class="offer-ps">
+                    After the test month, we either scale up or part as friends. 
+                    No hard feelings, no contracts, no BS.
+                </p>
             </div>
         </div>
     </section>
@@ -699,24 +870,23 @@
         </div>
     </section>
 
-    <!-- CTA Section med LinkedIn -->
+    <!-- CTA Section - ENKEL OG RENSKREVET -->
     <section id="contact" class="cta-section">
         <div class="container">
             <div class="cta-content">
                 <h2>Ready for Predictable Meetings?</h2>
                 <p>Let's see if we're a fit. 15-minute intro call — no pitch, just alignment.</p>
-                <div class="cta-buttons">
+                
+                <!-- KUN EN KNAPP - fjerner valgparalyse -->
+                <div class="cta-buttons" style="margin: 2.5rem 0;">
                     <a href="https://calendly.com/patrik-avendrapartners/new-meeting" class="btn btn-primary btn-large">
                         <i class="fas fa-calendar-alt"></i>
-                        Book Intro Call
-                    </a>
-                    <a href="mailto:patrik@avendrapartners.com" class="btn btn-outline">
-                        <i class="fas fa-envelope"></i>
-                        Email Patrik
+                        Book Test Month Call
                     </a>
                 </div>
+                
                 <!-- KUN 1 LinkedIn lenke her -->
-                <div style="margin-top: 1.5rem;">
+                <div style="margin-top: 2rem;">
                     <p style="color: var(--text-muted); font-size: 0.875rem;">
                         <i class="fab fa-linkedin"></i> 
                         <a href="http://linkedin.com/in/patrik-bachmann-a0362738b" target="_blank" style="color: var(--primary-color);">
@@ -724,7 +894,8 @@
                         </a>
                     </p>
                 </div>
-                <div class="cta-note">
+                
+                <div class="cta-note" style="margin-top: 1.5rem;">
                     <i class="fas fa-info-circle"></i>
                     <span>Results-based - pay only for real meetings</span>
                 </div>
